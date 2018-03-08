@@ -1,0 +1,53 @@
+.hr-rule {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  position: relative;
+  left: -45px;
+  width: 104%;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section .section-content {
+  position: relative;
+}
+
+.doc_details {
+  text-align: center;
+}
+
+.doc_img {
+  width: 120px;
+  border-radius: 65px;
+  border: 1px solid #ccc;
+}
+
+.doc_detail {
+  line-height: 250%;
+  margin-top: -10px;
+}
+
+.appnmt_panel {
+  border-bottom: 1px solid #fff;
+  padding: 15px;
+  background-color: rgba(198, 208, 241, 0.76);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.appnmt_panel
+ {
+    color: rgb(14, 12, 12);
+    text-align: center
+}
+
+.text-styling{
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  text-indent: 20px;
+}

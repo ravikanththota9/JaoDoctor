@@ -1,0 +1,13 @@
+.navbar {
+  margin-bottom: 0;
+
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #8d9993;
+}
+
+
+.nav.navbar-nav.navbar-right li a {
+  color: #ffffff;
+}

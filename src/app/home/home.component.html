@@ -1,0 +1,65 @@
+<head>
+
+</head>
+
+
+<body>
+
+    <div class="container-fluid">
+      <div class="row header-container ">
+        <h1 class="new-header"><mark class="mark">Take the guess work out of health care</mark></h1>
+      </div>
+
+
+      <!-- <div class='row'>
+          <div id="custom-search-input">
+            <div class="dropdown center">
+              <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">Select City
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu ">
+                <li><a href="#">Hyderabad</a></li>
+                <li><a href="#">Banglore</a></li>
+                <li><a href="#">Pune</a></li>
+              </ul>
+              <input id="placeholder">
+            </div>
+
+          </div>
+      </div> -->
+
+      <!-- <input placeholder="Please Select" class="rdonly" style="height:50px; width:300px;"> -->
+      <div>
+      <form >
+    <div class="form-group col-xs-2 col-xs-offset-3">
+      <input [(ngModel)]="autoSearchSelectedValue" name="something"  class="form-control input-lg rdonly " id="inputlg" id="pwd" placeholder="Enter City" (click)="onclickCityBox()">
+      <div class = " dropdown-content {{showDivCity}}">
+          <ul class="con">
+            <li class="conli" *ngFor="let key of resultsArrayCity">
+              <div class = "conlia" (click)="onSelectOfAutoSeachValue(key)">
+                  <a>{{key}}</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <div class="form-group col-xs-4 ">
+      <input class="form-control input-lg rdonly" id="inputlg" id="pwd" placeholder="Search by Location/Name" (click)= "onclickBox()">
+      <div class = "dropdown-content-doctor {{showDiv}}">
+          <ul class="con">
+              <li class="conli" *ngFor="let key of resultsArrayDoctor">
+                <div class = "conlia" (click)="onSelectOfAutoSeachValue(key)">
+                    <a>{{key}}</a>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </div>
+  </form>
+
+</div>
+    </div>
+    <!-- <div class="rdonly col-xs-offset-3">
+
+
+    </div> -->
+</body>
