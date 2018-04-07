@@ -33,14 +33,14 @@
 .appnmt_panel {
   border-bottom: 1px solid #fff;
   padding: 15px;
-  background-color: rgba(198, 208, 241, 0.76);
+  background-color: #002444;
   font-size: 16px;
   font-weight: 700;
 }
 
 .appnmt_panel
  {
-    color: rgb(14, 12, 12);
+    color: #ffffff;
     text-align: center
 }
 

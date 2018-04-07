@@ -1,6 +1,18 @@
 .navbar {
   margin-bottom: 0;
+  background-color: #002444;
+}
 
+.navbar-brand{
+
+  padding-left: 50px;
+  font-size: 26px;
+  line-height: 35px;
+}
+
+.logo{
+  padding-top: 10px;
+  color: #ffffff;
 }
 
 .navbar-default .navbar-nav > li > a:hover {

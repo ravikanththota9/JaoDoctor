@@ -3,63 +3,136 @@
 </head>
 
 
-<body>
+<body >
 
+  <div class="home-banner-body" (click)="onClickOutside()">
     <div class="container-fluid">
       <div class="row header-container ">
-        <h1 class="new-header"><mark class="mark">Take the guess work out of health care</mark></h1>
+        <h1 class="new-header">
+          Take the guess work out of health care
+        </h1>
       </div>
 
+      <div class="row">
 
-      <!-- <div class='row'>
-          <div id="custom-search-input">
-            <div class="dropdown center">
-              <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">Select City
-              <span class="caret"></span></button>
-              <ul class="dropdown-menu ">
-                <li><a href="#">Hyderabad</a></li>
-                <li><a href="#">Banglore</a></li>
-                <li><a href="#">Pune</a></li>
+        <div class="popular-search-styling">
+          <span>
+            <b>Popular cities : </b>
+          </span>
+          <a class="rdonly cities-search-styling">Bangalore</a>
+          <a class="rdonly cities-search-styling">Hyderabad</a>
+          <a class="rdonly cities-search-styling">Delhi</a>
+          <a class="rdonly cities-search-styling">Pune</a>
+          <a class="rdonly cities-search-styling">Mumbai</a>
+
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <form>
+          <div class="form-group col-xs-2 col-xs-offset-3">
+            <input [(ngModel)]="autoSearchSelectedValue" name="city" (keyup)="onCitiesSelectKey($event)" class="form-control input-lg rdonly " id="inputlg" id="pwd" placeholder="Enter city"
+              (click)="onclickCityBox()">
+            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            <div class=" dropdown-content {{showDivCity}}">
+              <ul class="con">
+                <li class="conli" *ngFor="let key of resultsArrayCity">
+                  <div class="conlia" (click)="onSelectOfAutoSeachValue(key)">
+                    <a>{{key}}</a>
+                  </div>
+                </li>
               </ul>
-              <input id="placeholder">
             </div>
+          </div>
+          <div class="form-group col-xs-4 ">
+            <input [(ngModel)]="autoSearchSelectedHospitalValue" name="hospital" (keyup)="onHospitalSelectKey($event)" class="form-control input-lg rdonly" id="inputlg" id="pwd"
+              placeholder="Search hospital/clinic name" (click)="onclickBox()">
+            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            <div class="dropdown-content-doctor {{showDiv}}">
+              <ul class="con">
+                <li class="conli" *ngFor="let key of resultsArrayDoctor">
+                  <div class="conlia" (click)="onSelectOfAutoSeachHospitalValue(key)">
+                    <a>{{key.title}}</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <div>
+
+    <!--Footer-->
+    <!-- <footer class="page-footer font-small blue-grey lighten-5 pt-0"> -->
+
+      <div style="background-color: #002444;">
+        <div class="container">
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-lg-4 footer">
+              <strong>© 2018 Copyright:</strong>
+              <a href="https://jao.doctor/">
+                <strong> jao.doctor</strong>
+              </a>
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+            <div class="col-lg-4 footer">
+              <strong>Get connected with us on social networks!</strong>
+              <a class="fb-ic ml-0">
+                <i class="fa fa-facebook white-text mr-lg-4"> </i>
+              </a>
+              <!--Twitter-->
+              <a class="tw-ic">
+                <i class="fa fa-twitter white-text mr-lg-4"> </i>
+              </a>
+              <!--Google +-->
+              <a class="gplus-ic">
+                <i class="fa fa-google-plus white-text mr-lg-4"> </i>
+              </a>
+              <!--Linkedin-->
+              <a class="li-ic">
+                <i class="fa fa-linkedin white-text mr-lg-4"> </i>
+              </a>
+
+            </div>
+            <!--Grid column-->
+            <!-- <div class="col-12 col-md-5 text-right mb-4 mb-md-0">
+                      <h6 class="mb-0 text-md-left">
+                          <strong style="color:#8AA8BD;">Get connected with us on social networks!</strong>
+                      </h6>
+                  </div> -->
+            <!--Grid column-->
+
+            <!--Grid column-->
+
+            <!--Grid column-->
 
           </div>
-      </div> -->
-
-      <!-- <input placeholder="Please Select" class="rdonly" style="height:50px; width:300px;"> -->
-      <div>
-      <form >
-    <div class="form-group col-xs-2 col-xs-offset-3">
-      <input [(ngModel)]="autoSearchSelectedValue" name="something"  class="form-control input-lg rdonly " id="inputlg" id="pwd" placeholder="Enter City" (click)="onclickCityBox()">
-      <div class = " dropdown-content {{showDivCity}}">
-          <ul class="con">
-            <li class="conli" *ngFor="let key of resultsArrayCity">
-              <div class = "conlia" (click)="onSelectOfAutoSeachValue(key)">
-                  <a>{{key}}</a>
-              </div>
-            </li>
-          </ul>
+          <!--Grid row-->
         </div>
-    </div>
-    <div class="form-group col-xs-4 ">
-      <input class="form-control input-lg rdonly" id="inputlg" id="pwd" placeholder="Search by Location/Name" (click)= "onclickBox()">
-      <div class = "dropdown-content-doctor {{showDiv}}">
-          <ul class="con">
-              <li class="conli" *ngFor="let key of resultsArrayDoctor">
-                <div class = "conlia" (click)="onSelectOfAutoSeachValue(key)">
-                    <a>{{key}}</a>
-                </div>
-              </li>
-            </ul>
-        </div>
-    </div>
-  </form>
+      </div>
 
-</div>
-    </div>
-    <!-- <div class="rdonly col-xs-offset-3">
+      <!--Footer Links-->
 
+      <!--/.Footer Links-->
 
-    </div> -->
+      <!-- Copyright-->
+      <div class="footer-copyright py-3 text-center">
+        © 2018 Copyright:
+        <a href="https://jao.doctor/">
+          <strong> Jao.doctor</strong>
+        </a>
+      </div>
+      <!--/.Copyright -->
+
+    <!-- </footer> -->
+    <!--/.Footer-->
+
+  </div>
 </body>

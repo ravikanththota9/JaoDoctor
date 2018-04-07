@@ -1,15 +1,18 @@
-body{
-
-  background-image: url("assets/backgroud.jpg");
-  background-size: 100% 100%;
-  height: 700px;
+.home-banner-body {
+  background: url(assets/backgroud.jpg) top center no-repeat;
+  min-height: 629px;
+  background-attachment: fixed;
+  background-position-y: -210px;
+  background-position-x: -499px;
 }
 
 .new-header {
   text-align: center;
   font-size: 40px;
-  color: rgb(0, 0, 0);
+  color: #002444;
   font-weight: bold;
+  text-shadow: 0 0 2px #000000;
+  padding-top: 75px;
 }
 
 .header-container {
@@ -18,7 +21,7 @@ body{
 }
 
 .mark{
-  background-color: #ecececf5;
+  background-color: #fffffff5;
 }
 
 .col-xs-2{
@@ -49,12 +52,12 @@ body{
 
 .dropdown-content {
   position: relative;
-  width: 215px;
+  width: 220px;
   margin: 0 auto;
   padding: 5px;
 
   /* Styles */
-  background: rgb(255, 252, 252);
+  background: #ffffff;
   border-radius: 7px;
   border: 1px solid rgba(0,0,0,0.15);
   box-shadow: 0 1px 1px rgba(50,50,50,0.1);
@@ -64,11 +67,13 @@ body{
   /* Font settings */
   font-weight: bold;
   color: #8AA8BD;
+  max-height: 150px;
+  overflow-y: scroll;
 }
 
 .dropdown-content-doctor {
   position: relative;
-  width: 430px;
+  width: 445px;
   margin: 0 auto;
   padding: 5px;
 
@@ -83,6 +88,8 @@ body{
   /* Font settings */
   font-weight: bold;
   color: #8AA8BD;
+  max-height: 150px;
+  overflow-y: scroll;
 }
 
 .dropdown {
@@ -121,5 +128,32 @@ body{
   font-weight: 100;
   letter-spacing: 2px;
   color: #fff;
+}
+
+.speciality-list-container {
+  color: #3f3636;
+  font-size: 15px;
+  padding: 15px 0;
+  position: relative;
+  width: 785px;
+  margin: 0 auto;
+
+}
+
+.popular-search-styling{
+  padding-left: 400px;
+  color: #002444;
+}
+
+.cities-search-styling{
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #002444;
+}
+
+.footer{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color:#8AA8BD
 }
 

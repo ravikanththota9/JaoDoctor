@@ -10,9 +10,9 @@
               <div class="des-info">
                 <div class="media" style="border: 1px solid rgb(204, 204, 204); padding: 25px;">
                   <div class="doc_details">
-                    <img src="assets/pp.jpg" class="doc_img" alt="" />
+                    <img src="assets/hospital.jpg" class="doc_img" alt="" />
                     <div class="name" style="font-size:18px;font-weight: bold;margin-top: 12px;">
-                      Dr. Ravikanth Thota
+                        {{hospitalInformation.name}}
                     </div>
                   </div>
                   <hr>
@@ -21,38 +21,46 @@
                       <div>
                         <i class="fa fa-medkit mrm" style="font-size:20px; color:#828486"></i>
                       </div>
-                      <div style="margin-left:7px;line-height:1.5">
-                        Orthopedic Surgery,
+                      <div style="margin-left:7px;line-height:-1.5">
+                        {{hospitalInformation.specialist}}
                       </div>
                     </div>
                     <br>
                     <div class="" style="display:inline-flex">
                       <div>
-                        <i class="fa fa-graduation-cap" style="font-size:20px; color:#828486" aria-hidden="true"></i>
+                        <i class="fa fa-bed" style="font-size:20px; color:#828486" aria-hidden="true"></i>
                       </div>
                       <div style="margin-left:7px">
-                        MBBS, MS, MCh </div>
+                        {{hospitalInformation.beds}} beds </div>
                     </div>
                     <br>
+                    <div class="" style="display:inline-flex">
+                        <div>
+                          <i class="fa fa-user-md" style="font-size:20px; color:#828486" aria-hidden="true"></i>
+                        </div>
+                        <div style="margin-left:7px">
+                          {{hospitalInformation.numberOfDoctors}} doctors </div>
+                      </div>
+                      <br>
                     <div class="" style="display:inline-flex;line-height:1">
                       <div class="name">
                         <i class="fa fa-map-signs mrm" style="font-size:20px; color:#828486"></i>
                       </div>
-                      <div style="margin-left: 6px;line-height:1.5">Apollo hospital, Film nagar, jubille hills,Hyderabad,Andhra Pradesh,India</div>
+                      <div style="margin-left: 6px;line-height:-0.5">{{hospitalInformation.address}}</div>
                     </div>
                     <br>
                     <div class="" style="display:inline-flex">
                       <div class="phone">
                         <i class="fa fa-phone mrm" style="font-size:20px; color:#828486"></i>
                       </div>
-                      <div style="margin-left: 8px;">9247258989</div>
+                      <div style="margin-left: 8px;">+91 40395 64252 ( Extension: 108)</div>
                     </div>
                     <br>
                     <div class="" style="display:inline-flex">
                       <div class="phone">
                         <i class="fa fa-envelope mrm" style="font-size:20px; color:#828486"></i>
                       </div>
-                      <div style="margin-left: 8px;">Ravikanth@gmail.com</div>
+                      <div style="margin-left: 8px;"> {{hospitalInformation.mail}}</div>
                     </div>
                     <br>
                     <div>
@@ -67,13 +75,10 @@
                 <div class="appnmt_panel">Details</div>
                 <br>
                 <div class="row">
-                  <div class="col-xs-6 text-center">
-                    <input type="radio" id="Appnmnttype" value="Routine" name="Apptype" class="square-blue">
-                    <span style="position: relative;top:1px">Upload medical documents</span>
-                  </div>
-                  <div class="col-xs-6 text-center">
-                    <input type="radio" id="Appnmnttype" value="Early" name="Apptype" class="square-blue">
-                    <span style="position: relative;top:1px">View doctor details</span>
+                  <div class="col-xs-12 text-center">
+                    <!-- <input type="radio" id="Appnmnttype" value="Routine" name="Apptype" class="square-blue"> -->
+                    <span style="position: relative;top:1px">Upload medical documents  .</span>
+                    <button type="button" class="btn btn-primary btn-md">Upload</button>
                   </div>
                 </div>
                 <div class="row">
@@ -83,9 +88,9 @@
 
                     Please provide the below details and upload required documents
                   </div>
-                  <div class= "col-xs-12 text-info text-styling">
+                  <div class= "col-xs-12 text-info text-styling ">
 
-                      <p>Dr. Ravikanth is a Obstetrician  in Hyder Nagar, Hyderabad and has an experience of 14 years in these fields. Dr. Ravikanth practices at Birthright By Rainbow in Hyder Nagar, Hyderabad. He completed MBBS from Dr. NTR University of Health Sciences Andhra Pradesh in 2004 and DGO from Osmania University in 2009</p>
+                      <p> {{hospitalInformation.hospitalInformation}}</p>
                     </div>
                     <div  id="googleMap" style="width:780px;height:200px;"></div>
                 </div>

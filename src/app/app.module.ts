@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
+import { CitiesService } from './core/cities.service';
+import { HospitalService } from './core/hospital.service';
 
 
 @NgModule({
@@ -19,11 +22,11 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-
+    FormsModule,
+    Ng4GeoautocompleteModule.forRoot()
   ],
 
-  providers: [],
+  providers: [CitiesService,HospitalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
